@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h2 class="center"><span style="color: green;">Login </span><span style="color: red;"> Here</span></h2>
+		<img src="img/user%20(4).png" alt="user">
+		<form class="form-horizontal">
+			<div class="form-group-row">
+				<div class="col-md-12" id="email">
+					<input type="email" placeholder="Email..." id="email_field" />
+				</div>
+
+				<div class="col-md-12" id="password">
+					<input type="password" placeholder="Password..." id="password_field" />
+				</div>
+
+				<div class="col-md-12" id="btn">
+					<button style="background-color: orange; color: white; font-weight: 100;" onclick="login()" class="btn btn-block btn-danger">Login to Account</button>
+					<button style="background-color: orange; color: white; font-weight: 100;" class="btn btn-block" id="register"><a href="forgotpass.html" target="_self" style="color: white; font-weight: 100;">Forgot Password</a></button>
+					<button style="background-color: orange; color: white; font-weight: 100;" class="btn btn-block" id="register"><a href="register.html" target="_self" style="color: white; font-weight: 100;">Register</a></button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+	<script src="Js/script.js"></script>
+	<script src="Js/index.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

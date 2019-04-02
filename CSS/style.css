@@ -1,0 +1,42 @@
+#myCarousel{
+	margin-top: 40px;
+}
+
+
+
+.center{
+	color: aqua;
+	text-align: center;
+	font-weight: 400;
+}
+
+img{
+	margin-left: 120px;
+}
+
+#email{
+	margin-top: 40px;
+	margin-left:20px;
+	margin-right: 20px;
+}
+
+#password{
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#btn{
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-weight: 100;
+	color: orange;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+

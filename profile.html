@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Profile page</title>
+	<script type="text/javascript" src="cordova.js"></script>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			function camSuccess(imgData) {
+				$("#camPH").attr("src", imgData);
+
+			}
+
+			function camError(error) {
+
+				alert(error);
+			}
+
+			function accessCamera() {
+				var options = {
+					destinationType: Camera.DestinationType.FILE_URI,
+					sourceType: Camera.PictureSourceType.CAMERA
+				};
+
+				navigator.camera.getPicture(camSuccess, camError, options);
+			}
+
+			$("#btn-camera").on("click", accessCamera);
+		});
+
+	</script>
+
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="CSS/profile.css">
+</head>
+
+<body>
+	<div class="container">
+		<a href="homepage.html" target="_self"><img src="icon/backbtn%20(1).png" class="img-responsive"></a>
+		<div class="row profile">
+			<div class="col-md-3">
+				<div class="profile-sidebar">
+					<!-- SIDEBAR USERPIC -->
+					<div class="profile-userpic">
+						<img id="camPH" class="img-responsive" alt="image" style="height: 150px; width: 150px; border-radius: 150px; background-color: aqua;">
+					</div>
+					<!-- END SIDEBAR USERPIC -->
+					<!-- SIDEBAR USER TITLE -->
+					<div class="profile-usertitle">
+						<div class="profile-usertitle-name">
+							<p id="user_para" class="text-center"> You're currently logged in.</p>
+						</div>
+						<div class="profile-usertitle-job">
+							Developer
+						</div>
+					</div>
+					<!-- END SIDEBAR USER TITLE -->
+					<!-- SIDEBAR BUTTONS -->
+					<div class="profile-userbuttons">
+						<button style="background-color: green; color: white;" type="button" class="btn btn-success btn-sm" id="btn-camera">Add photo</button>
+						<button style="background-color: red; color: white;" onclick="logout()" type="button" class="btn btn-danger btn-sm">Signout</button>
+					</div>
+					<!-- END SIDEBAR BUTTONS -->
+					<!-- SIDEBAR MENU -->
+					<div class="profile-usermenu">
+						<ul class="nav">
+							<li class="active">
+								<a href="#">
+									<i class="glyphicon glyphicon-home"></i>
+									Overview </a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="glyphicon glyphicon-user"></i>
+									Account Settings </a>
+							</li>
+							<li>
+								<a href="#" target="_blank">
+									<i class="glyphicon glyphicon-ok"></i>
+									Tasks </a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="glyphicon glyphicon-flag"></i>
+									Help </a>
+							</li>
+						</ul>
+					</div>
+					<!-- END MENU -->
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+
+	<script src="Js/script.js"></script>
+	<script src="Js/index.js"></script>
+</body>
+
+</html>
